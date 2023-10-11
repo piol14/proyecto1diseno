@@ -1,8 +1,6 @@
 #contenedor {
-    
     justify-content: space-between;
     align-items: center;
-
     padding: 10px;
 }
 
@@ -17,8 +15,8 @@
     margin-top: 20px;
     padding: 0;
     position: absolute;
-    top: 10px; 
-    right: 10px; 
+    top: 10px;
+    right: 10px;
 }
 
 #menu li {
@@ -29,25 +27,75 @@ hr {
     width: 100%;
 }
 
-.linea{
-    
+.linea {
+    margin-bottom: 30px;
     display: inline-block;
-    border-bottom: 1px solid #948d8d; 
+    border-bottom: 1px solid #cac0c0;
 }
 
-#cajas  {
-    display: inline-block; 
-    border: 1px solid #ccc;
-    width: 250px;
-    height: 250px;
+.categoria {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    padding: 14px;
+    background-color: rgb(178, 231, 233);
+    flex-direction: row;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.cajas {
+    display: flex;
+    flex-wrap: wrap;
     margin-right: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea las cajas en la parte superior */
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+}
 
-.categoria{
- margin-bottom: 20px;
-    
+.fila1 {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
 
-    padding: 10px;
-    background-color: #948d8d;
+.fila2 {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Elimina el margen derecho de la última fila1 */
+.fila1:last-child {
+    margin-right: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.fila1 p:nth-child(3) {
+    color: rgb(119, 117, 117);
+    margin-left: 5px;
+}
+
+.fila1 p:nth-child(2) {
+    margin-top: 7px;
+    margin-left: 5px;
 }
