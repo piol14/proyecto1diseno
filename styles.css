@@ -1,9 +1,9 @@
-/* Error: expected ";".
+/* Error: Undefined variable.
  *   ,
- * 2 | h1 {
- *   |    ^
+ * 4 |     color: $color-principal;
+ *   |            ^^^^^^^^^^^^^^^^
  *   '
- *   _h1.scss 2:4    @use
+ *   _h1.scss 4:12   @use
  *   style.scss 1:1  root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a   \2577 \a 2 \2502  h1 {\a   \2502     ^\a   \2575 \a   _h1.scss 2:4    @use\a   style.scss 1:1  root stylesheet';
+  content: "Error: Undefined variable.\a   \2577 \a 4 \2502      color: $color-principal;\a   \2502             ^^^^^^^^^^^^^^^^\a   \2575 \a   _h1.scss 4:12   @use\a   style.scss 1:1  root stylesheet";
 }
