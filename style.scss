@@ -1,0 +1,152 @@
+@use '_h1.scss';
+@use '_menu.scss';
+@use '_footer.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+// Colores
+$color-gris: rgba(214, 212, 212, 0.663);
+$color-gris-claro: rgba(128, 128, 128, 0.425);
+$color-fondo-categoria: rgb(188, 205, 206);
+$color-borde-cajas: #ccc;
+
+// Dimensiones
+$ancho-cajas: 250px;
+$altura-cajas: 240px;
+$padding-categoria: 14px;
+$margen-cajas: 15px;
+$margen-contenedor: 30px;
+$margen-titulo: 40px;
+$margen-linea1: 30px;
+$margen-hr: 50px;
+$margen-menu: 50px;
+$alto-categoria: 50px;
+$alto-footer: 0;
+$alto-que: 0;
+
+// Definición de variables
+$color-principal: #333;
+$color-secundario: #999;
+$tamano-titulo: 24px;
+
+// Anidaciones
+#contenedor {
+  background-color: #f4f4f4;
+  padding: 20px;
+
+  // Estilo para el título
+  
+
+  // Estilo para los párrafos
+  p {
+    color: $color-secundario;
+
+    // Cambia el color de los párrafos dentro de .fila1 y .fila2
+    .fila1, .fila2 & {
+      color: darken($color-secundario, 20%);
+    }
+  }
+
+  // Estilo para los enlaces
+  a {
+    color: $color-principal;
+
+    // Al pasar el ratón sobre los enlaces
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Más anidaciones
+#menu {
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    // Estilo para los elementos de la lista en el menú
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+  }
+}
+
+// Otras anidaciones
+.linea {
+  border: 1px solid $color-secundario;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.linea
+{
+  margin-bottom: $margen-contenedor;
+  display: inline-block;
+  border-bottom: 1px solid #cac0c0
+}
+.categoria{
+  margin-bottom: $margen-cajas;
+  margin-right: $margen-cajas;
+  text-align: center;
+  width: 200px;
+  height: $alto-categoria;
+  padding: $padding-categoria;
+  background-color: $color-fondo-categoria;
+  flex-direction: row;
+  margin-top: $margen-cajas;
+  box-sizing: border-box;
+}
+.cajas
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: $margen-cajas;
+  margin-left: 10px;
+  margin-top: $margen-cajas;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+.fila1, .fila2
+{
+  border: 1px solid $color-borde-cajas;
+  margin-right: $margen-cajas;
+  margin-bottom: $margen-cajas;
+  width: $ancho-cajas;
+  height: $altura-cajas;
+  display: flex;
+  flex-direction: column;
+}
+  &:last-child
+  {
+    margin-right: 0;
+  }
+  p
+  {
+    margin: 0;
+  }
+  &:nth-child(3)
+  {
+    color: $color-gris;
+    margin-left: 5px;
+  }
+  &:nth-child(2)
+  {
+    margin-top: 7px;
+    margin-left: 5px;
+  }
+#footer
+{
+  margin: $alto-footer;
+  color: grey;
+  margin-left: $margen-contenedor;
+  font-style: italic;
+}
+#que
+{
+  text-align: center;
+  height: $alto-que;
+}

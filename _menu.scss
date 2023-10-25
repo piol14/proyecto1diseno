@@ -1,0 +1,29 @@
+$margen-menu: 50px;
+@media screen and (max-width: 670px){
+ 
+  #menu ul {
+    margin-top: 0;
+  }
+  #titulo {
+    margin: 0 auto;
+  }
+  
+  #menu
+  {
+    margin: 0 auto;
+}
+}
+#menu ul
+{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: $margen-menu;
+  right: $margen-menu;
+}
+#menu li
+{
+  margin-top: $margen-menu;
+  margin-right: $margen-menu;
+}

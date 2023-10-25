@@ -1,0 +1,10 @@
+$alto-footer: 0;
+$margen-contenedor: 30px;
+
+#footer
+{
+  margin: $alto-footer;
+  color: grey;
+  margin-left: $margen-contenedor;
+  font-style: italic;
+}
